@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="thingOne" class="com.thanh.thing.ThingOne">
+        <constructor-arg ref="thingThree"/>
+        <constructor-arg ref="thingTwo"/>
+        <constructor-arg ref="thingTwo"/>
+    </bean>
+
+    <bean id="thingOne2" class="com.thanh.thing.ThingOne">
+        <constructor-arg index="0" ref="thingTwo"/>
+        <constructor-arg index="1" ref="thingTwo"/>
+        <constructor-arg index="2" ref="thingThree"/>
+    </bean>
+
+    <bean id="thingTwo" class="com.thanh.thing.ThingTwo" />
+    <bean id="thingThree" class="com.thanh.thing.ThingThree" />
+</beans>

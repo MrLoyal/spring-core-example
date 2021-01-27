@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="runningMan" class="com.thanh.lazy.RunningMan">
+        <constructor-arg ref="sloth" />
+    </bean>
+
+    <bean id="sloth" class="com.thanh.lazy.Sloth" lazy-init="true">
+    </bean>
+
+    <bean id="realSloth" class="com.thanh.lazy.RealSloth" lazy-init="true">
+    </bean>
+</beans>
